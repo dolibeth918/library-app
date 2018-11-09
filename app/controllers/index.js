@@ -1,5 +1,9 @@
 import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 
 export default Controller.extend({
-  isDisabled: true
+  emailAddress: '',
+  isDisabled: computed('emailAddress', function() {
+    return this.get('emailAddress') === '';
+  })
 });
