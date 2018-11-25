@@ -1,1 +1,7 @@
 <h1>About Page</h1>
+
+{{#each model as |rental|}}
+<div>
+  <h3>{{rental.title}}</h3>
+</div>
+{{/each}}
